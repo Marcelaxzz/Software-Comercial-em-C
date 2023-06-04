@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <locale.h>
-#include <string.h>
 #include <stdlib.h>
 #include <windows.h>
-#include <unistd.h> // para utilizar a função usleep()
+
+/*Software Comercial para a CYBERNETIC-Produtos E-Sports(camisetas e acessórios de times do cenário gamer). Esse nome foi escolhido em referência ao jogo CYBERPUNK 2077 e o objetivo
+é fazer um menu onde fique claro as informações e de fácil acesso para todos os públicos. */
 
 typedef struct Produto {
     char nome[51];
@@ -17,6 +18,7 @@ int main() {
     int escolha;
     float saldo = 0.0;
     float valor_produto;
+    float total_value;
     int quantidade;
     char nomedoproduto[51];
     int i,j;
@@ -26,13 +28,13 @@ int main() {
     int num_produtos_cadastrados = 0;
     
 	 for (i = 0; i < largura; i++) {
-        printf("=");
+        printf("="); //borda
     }
     printf("\n");
 for (i = 0; i < altura - 2; i++) {
         printf("|");
         for (j = 0; j < largura - 2; j++) {
-            printf(" ");
+            printf(" "); //parte da lateral da borda
         }
         printf("|\n");
     }
@@ -67,7 +69,7 @@ for (i = 0; i < altura - 2; i++) {
     printf("|\t\t\t          \\_________________________________________________/                           \t\t\t\t\t\t|");
     printf("|\t\t\t                \\___________________________________/                                    \t\t\t\t\t\t|");
 	 printf("|\t\t\t                                                                                          \t\t\t\t\t\t|");
-	 
+	
     printf("\n");
    for (i = 0; i < largura; i++) {
         printf("=");
@@ -82,20 +84,23 @@ for (i = 0; i < altura - 2; i++) {
         switch (escolha) {
     
             case 1:
-            
+            	 system("cls"); //pra limpar a opção anterior
+            	system("color D");
                 printf("\n\t\t\tOpção selecionada: Cadastrar Produto\n\t\t\t");		
-				printf("\n\t\tDigite o nome do produto: ");
+				printf("\n\t\t\tDigite o nome do produto: ");
                 scanf(" %[^\n]", nomedoproduto);
                 printf("\t\t\tDigite o valor do produto: ");
                 scanf("%f", &valor_produto);
                 printf("\t\t\tDigite a quantidade do produto: ");
                 scanf("%d", &quantidade);
                 printf("\t\t\tProduto cadastrado com sucesso!\n\t\t\t");
+
                 break;
                 
 
              case 2:
-          
+             	system("cls");
+          		system("color D");
                 printf("\t\t\tOpção selecionada: Vender produto\n");
                 printf("\t\t\tDigite o nome do produto que deseja colocar em anúncio: ");
                 scanf(" %[^\n]", nomedoproduto); /*Essa forma de utilização do scanf com " %[^\n]" é
@@ -110,49 +115,56 @@ for (i = 0; i < altura - 2; i++) {
                 int confirmacao;
                 scanf("%d", &confirmacao);
                 if (confirmacao == 1) {
-                float total_value = valor_produto * quantidade;
-                saldo += total_value;
+                total_value = valor_produto * quantidade;
+                saldo += total_value; //valor total
+                
                 printf("\t\t\tVenda realizada com sucesso! Total arrecadado: R$%.2f\n\t\t\t", total_value);
                 
-                
                 } else {
-                    printf("\t\t\tVenda cancelada.\n");
-                   
+                	system("cls");
+                	system("color D");
+                    printf("\t\t\tVenda cancelada com sucesso.\n");
+                  
                 }
                 break;
                 
                 
             case 3:
-            	printf("\033[0;34m");//cor azul escuro
+            	system("cls");
+            	system("color D");
                 printf("\n\t\t\t Opção selecionada: Relatório de caixa\n\t\t\t");
-                printf("Saldo atual: R$%.2f\n", saldo);
-                printf("\033[0m"); //redefine
+                printf("\n\t\t\tSaldo atual: R$%.2f\n", saldo);
+     
                 break;
                 
 
             case 4:
-            
-                printf("\n\t\t\tSaindo do sistema...\n\t\t\t");
+            	system("cls");
+            	system("color D");
+                printf("\t\t\t\tSaindo do sistema...");
+
                 break;
                 
             case 5:
-                printf("\t\t\t\033[1;93mOpção selecionada: Sobre o sistema\n\n\t\t\t");
+            	system("cls");
+            	system("color D");
+                printf("\t\t\tOpção selecionada: Sobre o sistema\n\t\t\t");
                 
-                printf("\t\t\t\033[1;93m\tVersão: 1.0\n\n\t\t\t");
-    			printf("\t\t\t\033[1;93m\tData de Lançamento: 01/06/2023\n\n\t\t\t");
-    			printf("\t\t\t\033[1;93m\tDesenvolvedora: Marcela Luiza\n\n\t\t\t");
-    			printf("\033[0m");	
+                printf("\t\t\t\tVersão: 1.0\n\t\t\t");
+    			printf("\t\t\t\tData de Lançamento: 01/06/2023\n\t\t\t");
+    			printf("\t\t\t\tDesenvolvedora: Marcela Luiza\n\t\t\t");
+
     			break;
                 
 
             default:
-            
+            	system("color D");
                 printf("\t\t\t Opção Inválida! Tente novamente.\n\t\t\t");
                 break;
                 
-                // Imprimir linha inferior da borda
+                // linha inferior da borda
 }
 
-    } while (escolha != 5);
+    } while (escolha != 4);
   return 0;
 }

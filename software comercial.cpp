@@ -20,7 +20,8 @@ int main() {
     float valor_produto;
     float total_value;
     int quantidade;
-    char nomedoproduto[51];
+    char nomedoproduto[51]; /*reservando um espaço na memória para armazenar uma sequência de caracteres de até 50 caracteres. 
+	O tamanho 51 é usado para "guardar" o caractere nulo que marca o final da string.*/
     int i,j;
     int largura = 120;
     int altura = 13;
@@ -77,10 +78,9 @@ for (i = 0; i < altura - 2; i++) {
     printf("\n");
     do {
     	printf("\n\n");
-    	printf("\033[1;35m"); // Código ANSI roxo.
+    	system("color D");
         printf("\t\t\t\tDigite a opção desejada: ");
         scanf("%d", &escolha);
-		printf("\033[0m"); //Redefine a configuração.
         switch (escolha) {
     
             case 1:
@@ -133,7 +133,7 @@ for (i = 0; i < altura - 2; i++) {
             	system("cls");
             	system("color D");
                 printf("\n\t\t\t Opção selecionada: Relatório de caixa\n\t\t\t");
-                printf("\n\t\t\tSaldo atual: R$%.2f\n", saldo);
+                printf("\n\t\t\t\tSaldo atual: R$%.2f\n", saldo);
      
                 break;
                 
@@ -151,7 +151,7 @@ for (i = 0; i < altura - 2; i++) {
                 printf("\t\t\tOpção selecionada: Sobre o sistema\n\t\t\t");
                 
                 printf("\t\t\t\tVersão: 1.0\n\t\t\t");
-    			printf("\t\t\t\tData de Lançamento: 01/06/2023\n\t\t\t");
+    			printf("\t\t\t\tData de Lançamento: 07/06/2023\n\t\t\t");
     			printf("\t\t\t\tDesenvolvedora: Marcela Luiza\n\t\t\t");
 
     			break;
@@ -159,12 +159,12 @@ for (i = 0; i < altura - 2; i++) {
 
             default:
             	system("color D");
-                printf("\t\t\t Opção Inválida! Tente novamente.\n\t\t\t");
+                printf("\t\t\t\tOpção Inválida! Tente novamente.\n\t\t\t");
                 break;
                 
                 // linha inferior da borda
 }
 
-    } while (escolha != 4);
+    } while (escolha != 4); /*loop do-while será repetido enquanto escolha for diferente de 4.*/
   return 0;
 }

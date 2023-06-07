@@ -6,7 +6,9 @@
 /*Software Comercial para a CYBERNETIC-Produtos E-Sports(camisetas e acessórios de times do cenário gamer). Esse nome foi escolhido em referência ao jogo CYBERPUNK 2077 e o objetivo
 é fazer um menu onde fique claro as informações e de fácil acesso para todos os públicos. */
 
-typedef struct Produto {
+typedef struct Produto { //a palavra-chave struct é usada para definir uma estrutura, que é uma forma de agrupar várias variáveis relacionadas em uma única entidade.
+//a estrutura Produto,cria um tipo de dado personalizado que contém algumas caracteristicas do produto, como nome, valor etc. o typedef foi criado para que não seja necessario repetir
+//o struct antes do produto sempre, servindo também para "apelidar" dados para tornae mais legível o codigo.
     char nome[51];
     float valor;
     int quantidade;
@@ -18,7 +20,7 @@ int main() {
     int escolha;
     float saldo = 0.0;
     float valor_produto;
-    float total_value;
+    float valor_total;
     int quantidade;
     char nomedoproduto[51]; /*reservando um espaço na memória para armazenar uma sequência de caracteres de até 50 caracteres. 
 	O tamanho 51 é usado para "guardar" o caractere nulo que marca o final da string.*/
@@ -115,10 +117,10 @@ for (i = 0; i < altura - 2; i++) {
                 int confirmacao;
                 scanf("%d", &confirmacao);
                 if (confirmacao == 1) {
-                total_value = valor_produto * quantidade;
-                saldo += total_value; //valor total
+                valor_total = valor_produto * quantidade;
+                saldo += valor_total; 
                 
-                printf("\t\t\tVenda realizada com sucesso! Total arrecadado: R$%.2f\n\t\t\t", total_value);
+                printf("\t\t\tVenda realizada com sucesso! Total arrecadado: R$%.2f\n\t\t\t", valor_total);
                 
                 } else {
                 	system("cls");

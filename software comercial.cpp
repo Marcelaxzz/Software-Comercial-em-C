@@ -3,6 +3,9 @@
 #include <stdlib.h>
 #include <windows.h>
 
+//Programa Comercial feito para a empresa CYBERNETIC, para a venda de produtos e-sports. Nome escolhido em referência ao jogo Cyberpunk 2077.//
+//Aluna: Marcela Luiza, Professor: Sandro.//
+
 int main() {
     system("color D");
     setlocale(LC_ALL, "Portuguese");
@@ -21,22 +24,37 @@ int main() {
     for (i = 0; i < largura; i++) {
         printf("=");
     }
-    printf("\n");
-    
-    for (i = 0; i < altura - 2; i++) {
+    printf("\n\n\n\n\n\n\n\n");
+    printf("|\t\t\t                                                                     \t\t\t\t\t\t|\n");
+    printf("|\t\t\t                                                                     \t\t\t\t\t\t|\n");
+    printf("|\t\t\t                                                                     \t\t\t\t\t\t|\n");
+    printf("|\t\t\t                                                                     \t\t\t\t\t\t|\n");
+  	printf("|\t\t\tSeja bem-vindo ao sistema CYBERNETIC - O seu Site de Produtos E-SPORTS!\t\t\t\t\t|\n");
+  	
+  	 for (i = 0; i < altura - 2; i++) {
         printf("|");
-        for (j = 0; j < largura - 2; j++) {
+    for (j = 0; j < largura - 2; j++) {
             printf(" ");
         }
-        printf("|\n");
+        printf("|\n"); //partes laterais da borda.
     }
-  	printf("|\t\t\tSeja bem-vindo ao sistema CYBERNETIC - O seu Site de Produtos E-SPORTS!\t\t\t\t\t|\n");
-    printf("|\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t|\n");
-    printf("|\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t|\n");
-    printf("|\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t|\n");
-    printf("|\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t|\n");
-    printf("|\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t|\n");
-    printf("|\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t|\n");
+  	
+  	
+  	 for (i = 0; i < largura; i++) {
+        printf("="); //parte inferior da borda
+    }
+    
+    system("pause"); //espera que o usuário aperte uma tela para que o menu seja exibido.
+    system("cls");
+    printf("\n");
+    
+    
+     for (i = 0; i < largura; i++) {
+        printf("=");
+    } //parte de cima da borda
+    
+    printf("|\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t|");
+    printf("|\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t|");
     printf("|\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t|\n");
     printf("|\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t|\n");
     printf("|\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t|\n");
@@ -60,13 +78,17 @@ int main() {
     printf("|\t\t\t         |                                                  |                          \t\t\t\t\t\t|");
     printf("|\t\t\t          \\_________________________________________________/                           \t\t\t\t\t\t|");
     printf("|\t\t\t                \\___________________________________/                                    \t\t\t\t\t\t|");
-	 printf("|\t\t\t                                                                                          \t\t\t\t\t\t|");
-	
-    printf("\n");
-   for (i = 0; i < largura; i++) {
+    printf("|\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t|\n");
+    printf("|\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t|\n");
+    printf("|\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t|\n");
+    printf("|\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t|\n");
+          
+    for (i = 0; i < largura; i++) {
         printf("=");
     }
     printf("\n");
+    
+    
     do {
     	printf("\n\n");
     	system("color D");
@@ -136,9 +158,10 @@ int main() {
 
                 break;
                 
-            case 5:
+         	 case 5:
             	system("cls");
             	system("color D");
+            	printf("\n\n\n\n\n\n\n\n\n\n");
                 printf("\t\t\tOpção selecionada: Sobre o sistema\n\t\t\t");
                 
                 printf("\t\t\t\tVersão: 1.0\n\t\t\t");
@@ -153,7 +176,7 @@ int main() {
                 printf("\t\t\t\tOpção Inválida! Tente novamente.\n\t\t\t");
                 break;
                 
-    
+               
 }
 
     } while (escolha != 4); /*loop do-while será repetido enquanto escolha for diferente de 4.*/

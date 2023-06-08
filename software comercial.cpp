@@ -3,45 +3,34 @@
 #include <stdlib.h>
 #include <windows.h>
 
-/*Software Comercial para a CYBERNETIC-Produtos E-Sports(camisetas e acessórios de times do cenário gamer). Esse nome foi escolhido em referência ao jogo CYBERPUNK 2077 e o objetivo
-é fazer um menu onde fique claro as informações e de fácil acesso para todos os públicos. */
-
-typedef struct Produto { //a palavra-chave struct é usada para definir uma estrutura, que é uma forma de agrupar várias variáveis relacionadas em uma única entidade.
-//a estrutura Produto,cria um tipo de dado personalizado que contém algumas caracteristicas do produto, como nome, valor etc. o typedef foi criado para que não seja necessario repetir
-//o struct antes do produto sempre, servindo também para "apelidar" dados para tornae mais legível o codigo.
-    char nome[51];
-    float valor;
-    int quantidade;
-} produto;
-
 int main() {
-	system("color D");
+    system("color D");
     setlocale(LC_ALL, "Portuguese");
+    
     int escolha;
     float saldo = 0.0;
     float valor_produto;
     float valor_total;
     int quantidade;
-    char nomedoproduto[51]; /*reservando um espaço na memória para armazenar uma sequência de caracteres de até 50 caracteres. 
-	O tamanho 51 é usado para "guardar" o caractere nulo que marca o final da string.*/
-    int i,j;
-    int largura = 120;
-    int altura = 13;
-    produto produtos_cadastrados[50];
-    int num_produtos_cadastrados = 0;
+    char nomedoproduto[51];
     
-	 for (i = 0; i < largura; i++) {
-        printf("="); //borda
+    int i, j;
+    int largura = 120;
+    int altura = 10;
+    
+    for (i = 0; i < largura; i++) {
+        printf("=");
     }
     printf("\n");
-for (i = 0; i < altura - 2; i++) {
+    
+    for (i = 0; i < altura - 2; i++) {
         printf("|");
         for (j = 0; j < largura - 2; j++) {
-            printf(" "); //parte da lateral da borda
+            printf(" ");
         }
         printf("|\n");
     }
-  printf("|\t\t\tSeja bem-vindo ao sistema CYBERNETIC - O seu Site de Produtos E-SPORTS!\t\t\t\t\t|\n");
+  	printf("|\t\t\tSeja bem-vindo ao sistema CYBERNETIC - O seu Site de Produtos E-SPORTS!\t\t\t\t\t|\n");
     printf("|\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t|\n");
     printf("|\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t|\n");
     printf("|\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t|\n");
@@ -86,7 +75,7 @@ for (i = 0; i < altura - 2; i++) {
         switch (escolha) {
     
             case 1:
-            	 system("cls"); //pra limpar a opção anterior
+            	system("cls"); //pra limpar a opção anterior
             	system("color D");
                 printf("\n\t\t\tOpção selecionada: Cadastrar Produto\n\t\t\t");		
 				printf("\n\t\t\tDigite o nome do produto: ");
@@ -118,7 +107,7 @@ for (i = 0; i < altura - 2; i++) {
                 scanf("%d", &confirmacao);
                 if (confirmacao == 1) {
                 valor_total = valor_produto * quantidade;
-                saldo += valor_total; 
+                saldo += valor_total; //soma o valor total ao saldo atual e o resultado dessa soma é o o saldo final.
                 
                 printf("\t\t\tVenda realizada com sucesso! Total arrecadado: R$%.2f\n\t\t\t", valor_total);
                 
@@ -164,7 +153,7 @@ for (i = 0; i < altura - 2; i++) {
                 printf("\t\t\t\tOpção Inválida! Tente novamente.\n\t\t\t");
                 break;
                 
-                // linha inferior da borda
+    
 }
 
     } while (escolha != 4); /*loop do-while será repetido enquanto escolha for diferente de 4.*/

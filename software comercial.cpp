@@ -3,9 +3,6 @@
 #include <stdlib.h>
 #include <windows.h>
 
-//Programa Comercial feito para a empresa CYBERNETIC, para a venda de produtos e-sports. Nome escolhido em referência ao jogo Cyberpunk 2077.//
-//Aluna: Marcela Luiza, Professor: Sandro.//
-
 int main() {
     system("color D");
     setlocale(LC_ALL, "Portuguese");
@@ -22,9 +19,16 @@ int main() {
     int altura = 10;
     
     for (i = 0; i < largura; i++) {
-        printf("=");
+        printf("="); //parte de cima da borda de boas vindas
     }
-    printf("\n\n\n\n\n\n\n\n");
+    
+    printf("\n");
+    printf("|\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t|");
+    printf("|\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t|");
+	printf("|\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t|");
+	printf("|\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t|");
+	printf("|\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t|");
+	printf("|\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t|\n");
     printf("|\t\t\t                                                                     \t\t\t\t\t\t|\n");
     printf("|\t\t\t                                                                     \t\t\t\t\t\t|\n");
     printf("|\t\t\t                                                                     \t\t\t\t\t\t|\n");
@@ -33,21 +37,19 @@ int main() {
   	
   	 for (i = 0; i < altura - 2; i++) {
         printf("|");
-    for (j = 0; j < largura - 2; j++) {
+        for (j = 0; j < largura - 2; j++) {
             printf(" ");
         }
-        printf("|\n"); //partes laterais da borda.
+        printf("|\n");
     }
   	
   	
   	 for (i = 0; i < largura; i++) {
         printf("="); //parte inferior da borda
     }
-    
-    system("pause"); //espera que o usuário aperte uma tela para que o menu seja exibido.
+    system("pause");
     system("cls");
     printf("\n");
-    
     
      for (i = 0; i < largura; i++) {
         printf("=");
@@ -161,7 +163,6 @@ int main() {
          	 case 5:
             	system("cls");
             	system("color D");
-            	printf("\n\n\n\n\n\n\n\n\n\n");
                 printf("\t\t\tOpção selecionada: Sobre o sistema\n\t\t\t");
                 
                 printf("\t\t\t\tVersão: 1.0\n\t\t\t");

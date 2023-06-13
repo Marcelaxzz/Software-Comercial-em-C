@@ -12,7 +12,7 @@ int main() {
     float valor_produto;
     float valor_total;
     int quantidade;
-    char nomedoproduto[51];
+    char nomedoproduto[51]; //permite 51 caracteres no nome do produto 
     
     int i, j;
     int largura = 120;
@@ -89,7 +89,7 @@ int main() {
         printf("=");
     }
     printf("\n");
-    
+
     
     do {
     	printf("\n\n");
